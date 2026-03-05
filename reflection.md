@@ -18,6 +18,8 @@ The game looks normal visually when you run it for the first time. It is functio
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 I used Claude. 
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+I was trying to fix problem 2 I listed above. Claude suggested the error was on even-numbered attempts, the hint direction can be completely wrong because it's doing alphabetical string comparison instead of numeric comparison.
+When prompting further after the first fix did not work, Claude swapped lines 37 and 40 as the messages were swapped. I verified the result by running the app again and testing the hint messages to get the correct results.
 
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
