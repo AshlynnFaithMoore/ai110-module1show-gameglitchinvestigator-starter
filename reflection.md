@@ -5,15 +5,20 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+The game looks normal visually when you run it for the first time. It is functional in the sense that all buttons work and it takes in an integer input, you can win by guessing correctly, etc.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+  1. The constraints say that you need to be between 1-100, but if you give a number outside those constraints it still accepts it.
+  2. The higher/lower hints are flipped. For example, if the answer is 80 and I guess 75 the hint will say "Go Lower" and vice versa if I guessed 85 it would say "Go Higher".
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+I used Claude. 
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
