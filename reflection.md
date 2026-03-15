@@ -29,6 +29,7 @@ When asking about the reward point system, Claude originally said that both upda
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
