@@ -23,6 +23,7 @@ When prompting further after the first fix did not work, Claude swapped lines 37
 
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
+When asking about the reward point system, Claude originally said that both update_score "Too High" and "Too Low" had errors in point distribution. However after examining and running the code, this was incorrect. Only the Too High logic was incorrect. After asking Claude about the mistake it re-framed to only fix "Too High". I think part of the issue was me not explaining the game mechanics properly before asking it to fix the point system.
 ---
 
 ## 3. Debugging and testing your fixes

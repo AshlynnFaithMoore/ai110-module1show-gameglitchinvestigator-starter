@@ -32,7 +32,7 @@ def parse_guess(raw: str):
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
-
+# FIX ME
     try:
         if guess > secret:
             return "Too High", "📉 Go LOWER!" #swapped with 40
