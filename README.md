@@ -25,13 +25,30 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [] Describe the game's purpose.
+  A number guessing game where the player tries to guess a secret number within a limited number of attempts. The difficulty setting controls the number range and attempt limit. Players earn points for winning, with fewer points the more attempts they use.
+
+- [] Detail which bugs you found.
+  1. **Hard difficulty range was easier than Normal** — Hard used 1–50 while Normal used 1–100, making Hard the easiest difficulty.
+  2. **Attempts initialized to 1 instead of 0** — caused off-by-one errors in the attempts-left counter and score calculation.
+  3. **Info message hardcoded "1 to 100"** — the range hint didn't update to reflect the selected difficulty.
+  4. **New Game reset ignored difficulty** — `random.randint(1, 100)` was hardcoded instead of using the difficulty range.
+  5. **Invalid guesses consumed an attempt** — the attempt counter incremented before input validation, so typing gibberish wasted a turn.
+  6. **Scoring asymmetry for "Too High"** — "Too High" alternated between +5 and -5 points based on attempt parity, while "Too Low" always deducted 5. Wrong guesses should never reward points.
+  7. **Secret number changed when difficulty switched** — the old secret persisted when switching difficulty, leaving a secret that could be out of the new range.
+
+- [] Explain what fixes you applied.
+  1. Updated `get_range_for_difficulty` so Hard uses a larger range than Normal.
+  2. Changed `st.session_state.attempts` initialization from `1` to `0`.
+  3. Updated the info message to use `{low}` and `{high}` variables.
+  4. Updated the New Game button to use `get_range_for_difficulty(difficulty)` for the correct range.
+  5. Moved `st.session_state.attempts += 1` to after successful input validation.
+  6. Removed the `attempt_number % 2` branch from `update_score` so "Too High" always deducts 5.
+  7. Added a difficulty check to the session state guard so the secret regenerates when difficulty changes.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![alt text](image.png)
 
 ## 🚀 Stretch Features
 
