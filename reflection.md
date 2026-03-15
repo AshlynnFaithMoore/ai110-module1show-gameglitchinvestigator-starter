@@ -41,9 +41,11 @@ Yes Claude built the test file described above after giving me an incorrect fix 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+Every time you interact with a Streamlit app, Streamlit reruns the entire script from top to bottom. Without session state, `random.randint()` would be called fresh on every rerun, generating a new secret number each time. 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Everytime you do anything in Streamlit, it "reruns" the entire script from top to bottom or in other words it starts fresh without remembering where it was. Session state is a way for Streamlit to remember value that should "survive" the reruns. Without session state (like in this case), the secret number value would execute on every single rerun, picking a brand new secret number every time the user interacted with the page.
 - What change did you make that finally gave the game a stable secret number?
-
+Two things changed: 1. Saving the difficulty and the random secret number to session_state to fix the number getting wrote over. 2. adding a difficulty check when you switch difficulties.
 ---
 
 ## 5. Looking ahead: your developer habits
