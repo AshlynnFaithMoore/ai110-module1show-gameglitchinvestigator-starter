@@ -29,10 +29,12 @@ When asking about the reward point system, Claude originally said that both upda
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-
+Both manually by fixing logic and then running the game to see the change and I had Claude write a test file.
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  I ran test_game_logic.py in the tests folder and passed all 12 tests. This was a test file Claude wrote after fixing the mistake witht he point system logic after some prompting. It covers both "Too high" and "Too low" logic and unkown/empty outcomes.
 - Did AI help you design or understand any tests? How?
+Yes Claude built the test file described above after giving me an incorrect fix to the scoring logic. Claude made sure to fix the mistake and instead of only testing the vald point system error, it also tested the error it had fixed to show that logic was working as well. After making the test file I allowed Claude to run it for me and explain every passed testcase.
 
 ---
 
