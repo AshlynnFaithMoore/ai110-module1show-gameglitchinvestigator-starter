@@ -52,5 +52,8 @@ Two things changed: 1. Saving the difficulty and the random secret number to ses
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  Writing pytest tests after fixing a bug is a habit I want to keep. It forced me to think about the expected behavior precisely, and having passing tests gave me actual evidence the fix worked rather than just assuming it did.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  I would explain the full game mechanics and context before asking AI to fix logic errors. When I asked Claude to fix the scoring system without explaining the rules, it overcorrected and flagged "Too Low" as broken when it wasn't. Better context upfront would have saved that back-and-forth.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  I used to assume AI-generated code was either right or wrong and easy to tell apart. This project showed me it can be subtly wrong in ways that look reasonable on the surface, so verifying AI suggestions by reading the logic carefully and running tests is just as important as getting the suggestion in the first place.
